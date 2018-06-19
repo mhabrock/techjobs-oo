@@ -3,18 +3,22 @@ package org.launchcode.controllers;
 import org.launchcode.models.forms.JobForm;
 import org.launchcode.models.data.JobData;
 import org.launchcode.models.Job;
+import org.launchcode.models.data.JobData;
 import org.springframework.stereotype.Controller;
+import org.launchcode.models.forms.JobForm;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
+/** import org.springframework.web.servlet.mvc.Controller;
+ */
 
 import javax.validation.Valid;
 
 /**
  * Created by LaunchCode
  */
+
 @Controller
 @RequestMapping(value = "job")
 public class JobController {
@@ -57,7 +61,6 @@ public class JobController {
         newJob.setPositionType(jobData.getPositionTypes().findById(jobForm.getPositionTypeId()));
 
         jobData.add(newJob);
-
         model.addAttribute("job", newJob);
 
         return "redirect:/job?id=" + newJob.getId();

@@ -2,8 +2,8 @@ package org.launchcode.controllers;
 
 import org.launchcode.models.Job;
 import org.launchcode.models.JobFieldType;
-import org.launchcode.models.forms.SearchForm;
 import org.launchcode.models.data.JobData;
+import org.launchcode.models.forms.SearchForm;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
